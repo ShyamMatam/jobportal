@@ -37,22 +37,36 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-600 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">JobPortal</Link>
-        <div className="space-x-4">
-          <Link href="/jobs" className="hover:underline">Jobs</Link>
-          {user ? (
-            <>
-              <Link href="/dashboard" className="hover:underline">Dashboard</Link>
-              <button onClick={handleLogout} className="hover:underline">Logout</button>
-            </>
-          ) : (
-            <>
-              <Link href="/login" className="hover:underline">Login</Link>
-              <Link href="/register" className="hover:underline">Register</Link>
-            </>
-          )}
+    <nav className="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold tracking-tight hover:text-blue-200 transition duration-300">
+            JobPortal
+          </Link>
+          <div className="space-x-6 text-sm font-medium">
+            <Link href="/jobs" className="hover:text-blue-200 transition duration-300">Jobs</Link>
+            {user ? (
+              <>
+                <Link href="/dashboard" className="hover:text-blue-200 transition duration-300">Dashboard</Link>
+                <button 
+                  onClick={handleLogout} 
+                  className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full transition duration-300"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="hover:text-blue-200 transition duration-300">Login</Link>
+                <Link 
+                  href="/register" 
+                  className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full transition duration-300"
+                >
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>
