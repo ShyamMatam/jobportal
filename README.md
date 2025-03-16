@@ -14,7 +14,7 @@ JobPortal is a full-stack web application that connects job seekers with employe
 
 - **Frontend:** React, Next.js
 - **Backend:** Node.js
-- **Database:** [Your database technology, e.g., MongoDB, PostgreSQL]
+- **Database:** MongoDb
 - **Styling:** Tailwind CSS
 - **Authentication:** JWT
 
@@ -75,6 +75,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-Shyam Matam - [Your email or other contact information]
+Shyam Matam - matamshyam01@gmail.com
 
 Project Link: [https://github.com/ShyamMatam/jobportal](https://github.com/ShyamMatam/jobportal)
