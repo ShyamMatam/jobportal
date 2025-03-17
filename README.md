@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JobPortal
 
 JobPortal is a full-stack web application that connects job seekers with employers. Built with modern web technologies, it provides a platform for posting jobs, submitting applications, and managing the hiring process.
@@ -17,17 +18,58 @@ JobPortal is a full-stack web application that connects job seekers with employe
 - **Database:** MongoDb
 - **Styling:** Tailwind CSS
 - **Authentication:** JWT
+=======
+# Project Name
+>>>>>>> d0ddb20d8ce880f1f0661d75c1ab4488836574fa
 
-## Getting Started
+A brief description of what this project does and who it's for.
 
+<<<<<<< HEAD
 ### Prerequisites
 
 - Node.js (v14 or later)
 - npm or yarn
 - [Any other prerequisites, e.g., database setup]
+=======
+## 🚀 Demo
+
+[Live Demo](https://jobportalshyammatam.netlify.app/)
+
+login as seeker: 
+mail:  shyam01@gmail.com
+password: shyam
+
+## ✨ Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## 💻 Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JavaScript](https://www.javascriot.info/)
+
+## 🛠️ Installation Steps
+
+1. Clone the repository
+
+git clone https://github.com/ShyamMatam/jobportal.git
+
+2. Install dependencies
+npm install
+
+
+3. Run the development server
+npm run dev
+
+>>>>>>> d0ddb20d8ce880f1f0661d75c1ab4488836574fa
 
 ### Installation
 
+<<<<<<< HEAD
 1. Clone the repository:
    ```
    git clone https://github.com/ShyamMatam/jobportal.git
@@ -78,3 +120,25 @@ This project is licensed under the [MIT License](LICENSE).
 Shyam Matam - matamshyam01@gmail.com
 
 Project Link: [https://github.com/ShyamMatam/jobportal](https://github.com/ShyamMatam/jobportal)
+=======
+## 🔑 Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file:
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+NEXT_PUBLIC_API_KEY=your_api_key
+
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+## 👨‍💻 Author
+
+- Your Name
+- GitHub: [@ShyamMatam](https://github.com/ShyamMatam)
+- LinkedIn: [shyammatan](https://linkedin.com/in/shyammatam)
+  
+
+>>>>>>> d0ddb20d8ce880f1f0661d75c1ab4488836574fa
