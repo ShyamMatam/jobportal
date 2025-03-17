@@ -4,7 +4,11 @@ A brief description of what this project does and who it's for.
 
 ## 🚀 Demo
 
-[Live Demo](your-deployed-netlify-link)
+[Live Demo](https://jobportalshyammatam.netlify.app/)
+
+login as seeker: 
+mail:  shyam01@gmail.com
+password: shyam
 
 ## ✨ Features
 
@@ -17,13 +21,13 @@ A brief description of what this project does and who it's for.
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://www.javascriot.info/)
 
 ## 🛠️ Installation Steps
 
 1. Clone the repository
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/ShyamMatam/jobportal.git
 
 2. Install dependencies
 npm install
