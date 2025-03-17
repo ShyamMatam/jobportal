@@ -52,13 +52,13 @@ export default function JobListings() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-br from-gray-50 to-gray-100"
+      className="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100"
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100 }}
-        className="text-4xl font-bold mb-12 text-center text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"
+        className="text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
       >
         Exciting Job Opportunities
       </motion.h1>
@@ -75,24 +75,25 @@ export default function JobListings() {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl"
+              className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-indigo-100"
             >
               <div className="p-6 flex flex-col space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
-                    <Image src={job.companyLogo || '/default-company-logo.png'} alt={job.company} width={60} height={60} className="rounded-full" />
+                    <Image src={job.companyLogo || '/default-company-logo.png'} alt={job.company} width={60} height={60}
+                      className="rounded-full ring-2 ring-indigo-300 p-1" />
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-2xl font-semibold text-blue-600">{job.title}</h2>
-                    <p className="text-gray-600 font-medium">{job.company} - {job.location}</p>
+                    <h2 className="text-2xl font-semibold text-indigo-600 hover:text-purple-600 transition-colors">{job.title}</h2>
+                    <p className="text-gray-700 font-medium">{job.company} - {job.location}</p>
                   </div>
                 </div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-600">
                   {job.employmentType} • {job.experienceLevel} • ₹{job.salary}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {job.skills.map((skill, index) => (
-                    <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                    <span key={index} className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full">
                       {skill}
                     </span>
                   ))}
@@ -101,11 +102,13 @@ export default function JobListings() {
                   <span className="text-sm text-gray-600">{job.workplaceType} • {job.jobType}</span>
                   <div className="space-x-2">
                     {user && user.role === 'user' && (
-                      <Link href={`/jobs/${job._id}/apply`} className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-300">
+                      <Link href={`/jobs/${job._id}/apply`}
+                        className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-2 rounded-full hover:from-green-500 hover:to-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg">
                         Apply
                       </Link>
                     )}
-                    <Link href={`/jobs/${job._id}`} className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300">
+                    <Link href={`/jobs/${job._id}`}
+                      className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-full hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-md hover:shadow-lg">
                       View details
                     </Link>
                   </div>
@@ -119,7 +122,7 @@ export default function JobListings() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-center text-gray-600 text-xl bg-white p-8 rounded-lg shadow-md"
+          className="text-center text-gray-600 text-xl bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-md border border-indigo-100"
         >
           No jobs available at the moment. Check back soon!
         </motion.p>

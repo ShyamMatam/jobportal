@@ -66,34 +66,35 @@ export default function Home() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto px-4 py-8"
+      transition={{ duration: 0.8 }}
+      className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 px-4 py-8"
     >
       <motion.h1
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 200 }}
-        className="text-5xl font-bold mb-12 text-center text-blue-600"
+        initial={{ scale: 0.9, rotateX: -90 }}
+        animate={{ scale: 1, rotateX: 0 }}
+        transition={{ type: 'spring', stiffness: 200, duration: 1 }}
+        className="text-6xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text drop-shadow-lg"
       >
         Welcome to Job Portal
       </motion.h1>
-      
+
       {user ? (
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
+          whileHover={{ scale: 1.02 }}
           transition={{ delay: 0.2 }}
-          className="mb-12 flex justify-between items-center bg-white shadow-lg rounded-lg p-6"
+          className="mb-12 flex justify-between items-center bg-white/80 backdrop-blur-sm shadow-xl rounded-2xl p-8 border border-white/20"
         >
           <div>
-            <p className="text-2xl mb-4">Welcome back, <span className="font-semibold text-blue-600">{user.name}</span>!</p>
-            <Link href="/dashboard" className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
+            <p className="text-2xl mb-4">Welcome back, <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">{user.name}</span>!</p>
+            <Link href="/dashboard" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-purple-600 transition duration-300 shadow-lg hover:shadow-xl">
               Go to Dashboard
             </Link>
           </div>
-          <button 
-            onClick={handleLogout} 
-            className="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition duration-300"
+          <button
+            onClick={handleLogout}
+            className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-full hover:from-red-600 hover:to-pink-600 transition duration-300 shadow-lg hover:shadow-xl"
           >
             Logout
           </button>
@@ -103,12 +104,12 @@ export default function Home() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="mb-12 flex justify-center space-x-6"
+          className="mb-12 flex justify-center space-x-8"
         >
-          <Link href="/register" className="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+          <Link href="/register" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-4 rounded-full hover:from-blue-600 hover:to-purple-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Register
           </Link>
-          <Link href="/login" className="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105">
+          <Link href="/login" className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-10 py-4 rounded-full hover:from-green-600 hover:to-teal-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Login
           </Link>
         </motion.div>
@@ -118,7 +119,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="text-3xl font-semibold mb-6 text-blue-600"
+        className="text-3xl font-semibold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text"
       >
         Latest Job Listings
       </motion.h2>
@@ -134,12 +135,13 @@ export default function Home() {
               key={job._id}
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
+              whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
               transition={{ delay: 0.2 * index }}
-              className="border p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              className="border border-white/20 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"
             >
-              <h3 className="text-2xl font-semibold text-blue-600">{job.title}</h3>
-              <p className="mb-3 text-gray-600">{job.company} - {job.location}</p>
-              <Link href={`/jobs/${job._id}`} className="text-blue-500 hover:underline">
+              <h3 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">{job.title}</h3>
+              <p className="mb-3 text-gray-700">{job.company} - {job.location}</p>
+              <Link href={`/jobs/${job._id}`} className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300 shadow-md hover:shadow-lg">
                 View Details
               </Link>
             </motion.li>
@@ -162,7 +164,7 @@ export default function Home() {
         transition={{ delay: 0.8 }}
         className="mt-12 text-center"
       >
-        <Link href="/jobs" className="text-blue-500 hover:underline text-lg">
+        <Link href="/jobs" className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-8 py-3 rounded-full hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
           View All Job Listings
         </Link>
       </motion.div>

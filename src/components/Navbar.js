@@ -37,30 +37,55 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
-      <div className="container mx-auto px-4 py-3">
+    <nav className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white shadow-xl">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-tight hover:text-blue-200 transition duration-300">
+          <Link
+            href="/"
+            className="text-3xl font-bold tracking-tighter hover:scale-105 transform transition-all duration-300 ease-in-out bg-gradient-to-r from-white to-blue-200 text-transparent bg-clip-text"
+          >
             JobPortal
           </Link>
-          <div className="space-x-6 text-sm font-medium">
-            <Link href="/jobs" className="hover:text-blue-200 transition duration-300">Jobs</Link>
+          <div className="space-x-8 text-base font-medium">
+            <Link
+              href="/jobs"
+              className="relative group hover:text-white transition-colors duration-300"
+            >
+              Jobs
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
             {user ? (
               <>
-                <Link href="/dashboard" className="hover:text-blue-200 transition duration-300">Dashboard</Link>
-                <button 
-                  onClick={handleLogout} 
-                  className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full transition duration-300"
+                <Link
+                  href="/dashboard"
+                  className="relative group hover:text-white transition-colors duration-300"
+                >
+                  Dashboard
+                  <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="bg-white text-purple-600 px-6 py-2.5 rounded-full font-semibold
+                    hover:bg-opacity-90 hover:shadow-lg transform hover:-translate-y-0.5 
+                    transition-all duration-300 ease-in-out active:scale-95"
                 >
                   Logout
                 </button>
               </>
             ) : (
               <>
-                <Link href="/login" className="hover:text-blue-200 transition duration-300">Login</Link>
-                <Link 
-                  href="/register" 
-                  className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full transition duration-300"
+                <Link
+                  href="/login"
+                  className="relative group hover:text-white transition-colors duration-300"
+                >
+                  Login
+                  <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </Link>
+                <Link
+                  href="/register"
+                  className="bg-white text-purple-600 px-6 py-2.5 rounded-full font-semibold
+                    hover:bg-opacity-90 hover:shadow-lg transform hover:-translate-y-0.5 
+                    transition-all duration-300 ease-in-out active:scale-95"
                 >
                   Register
                 </Link>

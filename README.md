@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JobPortal
+
+JobPortal is a full-stack web application that connects job seekers with employers. Built with modern web technologies, it provides a platform for posting jobs, submitting applications, and managing the hiring process.
+
+## Features
+
+- User authentication for job seekers and employers
+- Job listing creation and management for employers
+- Job search and application submission for job seekers
+- Personalized dashboards for both user types
+- Responsive design for seamless mobile and desktop experience
+
+## Tech Stack
+
+- **Frontend:** React, Next.js
+- **Backend:** Node.js
+- **Database:** MongoDb
+- **Styling:** Tailwind CSS
+- **Authentication:** JWT
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14 or later)
+- npm or yarn
+- [Any other prerequisites, e.g., database setup]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://github.com/ShyamMatam/jobportal.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Navigate to the project directory:
+   ```
+   cd jobportal
+   ```
 
-## Learn More
+3. Install dependencies:
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Set up environment variables:
+   Create a `.env.local` file in the root directory and add necessary variables (e.g., database URL, JWT secret).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Run the development server:
+   ```
+   npm run dev
+   ```
+   or
+   ```
+   yarn dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Provide brief instructions on how to use the application, e.g., how to create an account, post a job, apply for a job, etc.]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+Shyam Matam - matamshyam01@gmail.com
+
+Project Link: [https://github.com/ShyamMatam/jobportal](https://github.com/ShyamMatam/jobportal)
