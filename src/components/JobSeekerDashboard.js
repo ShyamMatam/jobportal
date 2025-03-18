@@ -51,10 +51,11 @@ export default function JobSeekerDashboard({ user }) {
                 border border-gray-100 hover:border-purple-200"
             >
               <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-purple-600 
-                  transition-colors duration-300 line-clamp-2">
-                  {job.title}
-                </h3>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white line-clamp-1">
+                    {job.title}
+                  </h3>
+                </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-600 text-sm sm:text-base">
@@ -62,7 +63,9 @@ export default function JobSeekerDashboard({ user }) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                         d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
-                    <p className="line-clamp-1">{job.company}</p>
+                    <p className="line-clamp-1 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-transparent bg-clip-text">
+                      {job.company}
+                    </p>
                   </div>
 
                   <div className="flex items-center text-gray-600 text-sm sm:text-base">
@@ -72,7 +75,9 @@ export default function JobSeekerDashboard({ user }) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <p className="line-clamp-1">{job.location}</p>
+                    <p className="line-clamp-1 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-transparent bg-clip-text">
+                      {job.location}
+                    </p>
                   </div>
                 </div>
 
