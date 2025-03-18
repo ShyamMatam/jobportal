@@ -115,7 +115,7 @@ export default function JobListings() {
 
                 <h2 className="text-3xl font-extrabold mb-4 relative group">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 transition-all duration-300">
-                    {job.title || 'Position Title Missing'}
+                    {job.title || job.position || 'Position Title Missing'}
                   </span>
                   <motion.div
                     className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"

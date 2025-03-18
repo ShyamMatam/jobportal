@@ -52,8 +52,8 @@ export default function JobSeekerDashboard({ user }) {
             >
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white line-clamp-1">
-                    {job.title}
+                  <h3 className="line-clamp-1 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-transparent bg-clip-text">
+                    {job.title || job.position || 'Position Title Missing'}
                   </h3>
                 </div>
 
