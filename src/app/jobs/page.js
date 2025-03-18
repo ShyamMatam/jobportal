@@ -80,12 +80,27 @@ export default function JobListings() {
               <div className="p-6 flex flex-col space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
-                    <Image src={job.companyLogo || '/default-company-logo.png'} alt={job.company} width={60} height={60}
-                      className="rounded-full ring-2 ring-indigo-300 p-1" />
+                    <Image
+                      src={job.companyLogo || '/default-company-logo.png'}
+                      alt={job.company}
+                      width={60}
+                      height={60}
+                      className="rounded-full ring-2 ring-indigo-300 p-1"
+                      unoptimized={job.companyLogo?.startsWith('http')}
+                    />
                   </div>
-                  <div className="flex-grow">
-                    <h2 className="text-2xl font-semibold text-indigo-600 hover:text-purple-600 transition-colors">{job.title}</h2>
-                    <p className="text-gray-700 font-medium">{job.company} - {job.location}</p>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-x-2">
+                      <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                        {job.position}
+                      </h3>
+                      <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+                        {job.type}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm leading-5 text-gray-500">
+                      {job.company} • {job.location}
+                    </p>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600">
