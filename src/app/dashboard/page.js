@@ -60,7 +60,7 @@ export default function Dashboard() {
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl font-extrabold text-indigo-700"
+          className="text-2xl font-extrabold text-indigo-700"
         >
           Welcome, {user.name}
         </motion.h1>
